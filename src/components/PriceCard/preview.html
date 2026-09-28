@@ -1,0 +1,17 @@
+<!-- @dsCard group="Webhely" height=520 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>PriceCard</title></head>
+<body>
+<div id="root" style="padding:var(--space-4)"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  var grid = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'var(--space-4)', maxWidth: 720 };
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { style: grid },
+    h(I.PriceCard, { name: 'Kezdés', price: '0 Ft', period: 'ingyenes', lead: 'Koncepció és költségvetés a briefből.', features: ['AI-koncepció és hangulat', 'Költségvetés-keret és felosztás', 'Szolgáltató-jelöltek kategóriánként'], action: h(I.Button, null, 'Kezdjük el') }),
+    h(I.PriceCard, { featured: true, badge: 'Ajánlott', name: 'Igen', price: '[ÁR] Ft', period: 'egyszer, az esküvőig', lead: 'A teljes szervezés, ketten.', features: ['Minden a Kezdésből', 'Szolgáltatói csatorna és üzenetek', 'Naptár teendőkkel és időpontokkal', 'Vendéglista és RSVP', 'A nap – nyomtatható menetrend', 'Partner meghívása'], action: h(I.Button, { variant: 'lagoon' }, 'Teljes hozzáférés') })));
+
+</script>
+</body>
+</html>

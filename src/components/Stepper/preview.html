@@ -1,0 +1,14 @@
+<!-- @dsCard group="Navigáció" height=150 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Stepper</title></head>
+<body>
+<div id="root" class="ig-stack" style="max-width:390px"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(I.Stepper, { steps: ['A pár', 'Stílus és hangulat', 'Helyszín és dátum', 'Keret'], current: 1 }),
+    h(I.Stepper, { steps: ['Csomag', 'Fizetés', 'Dátum rögzítése'], current: 2 })));
+</script>
+</body>
+</html>

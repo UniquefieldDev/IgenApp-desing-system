@@ -1,0 +1,20 @@
+<!-- @dsCard group="Naptár" height=420 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>CalendarItem</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  var col = { display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' };
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment,null,
+    h('div',{className:'ig-stack'},
+      h(I.CalendarItem,{kind:'teendo',title:'Anyakönyvvezető időpont foglalása',meta:'Hivatalos ügyek',date:'nov. 12.'}),
+      h(I.CalendarItem,{kind:'idopont',title:'Kóstoló a Kiskert Pajtában',meta:'Catering',date:'nov. 18.',time:'17:00'}),
+      h(I.CalendarItem,{kind:'teendo',title:'Mentalista listázása',date:'okt. 30.',done:true})),
+    h('div',{className:'ig-backdrop'},h('div',{style:col},
+      h(I.CalendarItem,{glass:true,kind:'teendo',title:'Fotós visszahívása',meta:'Szolgáltatók',date:'nov. 14.'}),
+      h(I.CalendarItem,{glass:true,kind:'idopont',title:'Ruhapróba',meta:'Ruha',date:'nov. 21.',time:'10:30'})))));
+</script>
+</body>
+</html>

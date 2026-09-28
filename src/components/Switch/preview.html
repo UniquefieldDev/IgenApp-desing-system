@@ -1,0 +1,17 @@
+<!-- @dsCard group="Űrlap" height=200 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Switch</title></head>
+<body>
+<div id="root" class="ig-stack" style="max-width:420px;gap:0"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(I.Switch, { label: 'Értesítés ajánlatról', hint: 'Push és e-mail, ha egy szolgáltató válaszol', checked: true }),
+    h(I.Switch, { label: 'A partner is szerkeszthet', hint: 'Mindketten látjátok és módosítjátok a tervet', checked: true }),
+    h(I.Switch, { label: 'Sötét téma', hint: 'Alapból a rendszer beállítását követi' })));
+
+</script>
+</body>
+</html>

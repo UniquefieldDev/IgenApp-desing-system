@@ -1,0 +1,16 @@
+<!-- @dsCard group="Adat" height=120 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Avatar</title></head>
+<body>
+<div id="root" class="ig-row" style="gap:var(--space-5)"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(I.Avatar, { pair: [{ name: 'Anna Kovács' }, { name: 'Bence Tóth' }], size: 'lg' }), h(I.Avatar, { pair: [{ name: 'Anna Kovács' }, { name: 'Bence Tóth' }] }), h(I.Avatar, { pair: [{ name: 'Anna Kovács' }, { name: 'Bence Tóth' }], size: 'sm' }),
+    h(I.Avatar, { name: 'Szabó Réka', size: 'lg' }), h(I.Avatar, { name: 'Szabó Réka' }), h(I.Avatar, { name: 'Szabó Réka', size: 'sm' }), h(I.Avatar, { name: 'Anna', tone: 'rose' }), h(I.Avatar, { name: 'Bence', tone: 'lagoon' })));
+
+</script>
+</body>
+</html>

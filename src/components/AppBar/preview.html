@@ -1,0 +1,16 @@
+<!-- @dsCard group="Navigáció" height=260 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>AppBar</title></head>
+<body>
+<div id="root" class="ig-backdrop" style="display:flex;gap:var(--space-5);flex-wrap:wrap;align-items:flex-start"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h('div', { style: { width: 390, maxWidth: '100%' } }, h(I.AppBar, { title: 'Fotósok', onBack: function () {}, action: h(I.IconButton, { icon: 'sliders', label: 'Szűrők' }) })),
+    h('div', { style: { width: 390, maxWidth: '100%' } }, h(I.AppBar, { large: true, title: 'Áttekintés', subtitle: '142 nap · 2027. június 12.', action: h(I.IconButton, { icon: 'bell', label: 'Értesítések', badge: 2 }) }))));
+
+</script>
+</body>
+</html>

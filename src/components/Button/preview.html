@@ -1,0 +1,12 @@
+<!-- @dsCard group="Műveletek" height=88 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Button</title></head>
+<body>
+<div id="root" class="ig-row"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment,null,h(I.Button,{variant:'primary'},'Koncepció készítése'),h(I.Button,null,'Megkeresés küldése'),h(I.Button,{variant:'lagoon'},'Teljes hozzáférés'),h(I.Button,{variant:'ghost'},'Mégse'),h(I.Button,{size:'sm'},'Rövidlistára')));
+</script>
+</body>
+</html>

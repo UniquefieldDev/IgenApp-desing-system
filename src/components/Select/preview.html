@@ -1,0 +1,17 @@
+<!-- @dsCard group="Űrlap" height=200 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Select</title></head>
+<body>
+<div id="root" class="ig-row" style="align-items:flex-start"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  var cats = [{ value: 'helyszin', label: 'Helyszín' }, { value: 'foto', label: 'Fotó és videó' }, { value: 'zene', label: 'Zene' }, { value: 'catering', label: 'Catering' }, { value: 'dekor', label: 'Dekor és virág' }];
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(I.Select, { label: 'Kategória', options: cats, value: 'foto', hint: 'A jelöltek ebben a kategóriában jelennek meg' }),
+    h(I.Select, { label: 'Kategória', options: cats, placeholder: 'Válasszatok kategóriát', error: 'Válasszatok egy kategóriát a folytatáshoz.' })));
+
+</script>
+</body>
+</html>

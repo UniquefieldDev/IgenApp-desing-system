@@ -1,0 +1,373 @@
+{
+  "name": "Igen",
+  "namespace": "Igen",
+  "bundle": "_ds_bundle.js",
+  "css": [
+    "_ds_tokens.css",
+    "_ds_bundle.css"
+  ],
+  "types": "components.d.ts",
+  "tokens": "tokens.json",
+  "cards": [
+    {
+      "name": "Accordion",
+      "path": "components/webhely/Accordion/Accordion.html",
+      "group": "Webhely",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Kérdés–válasz lista natív details/summary elemekkel: hajszálvonalak között"
+    },
+    {
+      "name": "AppBar",
+      "path": "components/navigacio/AppBar/AppBar.html",
+      "group": "Navigáció",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Mobil képernyőfejléc: vissza-gomb, cím és legfeljebb két művelet egy 56px-es sávban (appbar)"
+    },
+    {
+      "name": "Avatar",
+      "path": "components/adat/Avatar/Avatar.html",
+      "group": "Adat",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Kör alakú kép vagy monogram (display betű, surface-sunk alap) személyekhez: vendégek, szolgáltató kapcsolattartója"
+    },
+    {
+      "name": "Button",
+      "path": "components/muveletek/Button/Button.html",
+      "group": "Műveletek",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Pirula alakú gomb; a nézet egy fő műveletét emeli ki"
+    },
+    {
+      "name": "CalendarItem",
+      "path": "components/naptar/CalendarItem/CalendarItem.html",
+      "group": "Naptár",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Egy sor a Naptár közös idővonalán"
+    },
+    {
+      "name": "Callout",
+      "path": "components/visszajelzes/Callout/Callout.html",
+      "group": "Visszajelzés",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Beágyazott, megmaradó üzenet a tartalomban: tónusos háttér (-soft), ikon a saját színében, ink szöveg"
+    },
+    {
+      "name": "Card",
+      "path": "components/elrendezes/Card/Card.html",
+      "group": "Elrendezés",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Tartalomdoboz fejléccel: szemöldök (eyebrow), cím, jobb oldali művelet vagy státusz"
+    },
+    {
+      "name": "Checkbox",
+      "path": "components/urlap/Checkbox/Checkbox.html",
+      "group": "Űrlap",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Címkézett jelölőnégyzet (radius-sm, kipipálva mint), 44px-es sorban, opcionális segédszöveggel"
+    },
+    {
+      "name": "ChoiceChip",
+      "path": "components/urlap/ChoiceChip/ChoiceChip.html",
+      "group": "Űrlap",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Kiválasztható pirula többes választáshoz: a brief stílusjegyei („kerti”, „elegáns”, „rusztikus”), szolgáltató-kategóriák szűrése, étkezési igények"
+    },
+    {
+      "name": "Cover",
+      "path": "components/marka/Cover/Cover.html",
+      "group": "Márka",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Cover"
+    },
+    {
+      "name": "DotList",
+      "path": "components/elrendezes/DotList/DotList.html",
+      "group": "Elrendezés",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Felsorolás leíró oldalakon (landing, csomagok, súgó): a pont helyén a logó kis, összeért pöttypárja."
+    },
+    {
+      "name": "DotsLoader",
+      "path": "components/visszajelzes/DotsLoader/DotsLoader.html",
+      "group": "Visszajelzés",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Várakozás a hosszabb AI-műveletekre (koncepció, költségvetés-javaslat, szolgáltatói ajánlás): a logó két pöttye kering, közelít és összeér, majd újra elválik"
+    },
+    {
+      "name": "EmptyState",
+      "path": "components/elrendezes/EmptyState/EmptyState.html",
+      "group": "Elrendezés",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Üres lista vagy még el nem kezdett terület helye: surface-sunk mező, fölül a logó két pöttye nagyban és halványan (rose-soft, lagoon-soft), a rózsaszín pöttyben az opcionális ikon; alatta title stílus"
+    },
+    {
+      "name": "Footer",
+      "path": "components/webhely/Footer/Footer.html",
+      "group": "Webhely",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "A webhely lábléce: a logó egy mondattal, 2–4 linkoszlop label stílusú címekkel, alul a jogi sor és a jogi linkek"
+    },
+    {
+      "name": "Icon",
+      "path": "components/ikonok/Icon/Icon.html",
+      "group": "Ikonok",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Az Igen ikonkészlete: 24-es rács, 2px vonal, kerek végek és sarkok, mindig currentColor"
+    },
+    {
+      "name": "IconButton",
+      "path": "components/muveletek/IconButton/IconButton.html",
+      "group": "Műveletek",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Ikon-gomb 44px-es érintési célon, 24px-es ikonnal; a label kötelező, mert ez a gomb egyetlen szöveges neve"
+    },
+    {
+      "name": "ListItem",
+      "path": "components/elrendezes/ListItem/ListItem.html",
+      "group": "Elrendezés",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Egy sor egy listában: bal oldalon ikon vagy avatar, középen cím és meta, jobb oldalon státusz vagy összeg, végén nyíl, ha a sor továbbvisz"
+    },
+    {
+      "name": "Logo",
+      "path": "components/marka/Logo/Logo.html",
+      "group": "Márka",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Az Igen „Két pötty” logója: az i pöttye két egymás felé dőlő kör (rose, lagoon), a metszetük a betű színe"
+    },
+    {
+      "name": "Menu",
+      "path": "components/navigacio/Menu/Menu.html",
+      "group": "Navigáció",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Lebegő, liquid glass menü a fejléc ritkán használt pontjaihoz: fiók, partner meghívása, előfizetés, kijelentkezés"
+    },
+    {
+      "name": "Pager",
+      "path": "components/navigacio/Pager/Pager.html",
+      "group": "Navigáció",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Oldaljelző a landing körhintáihoz (vélemények, példa-koncepciók): az aktív oldal az összeért pöttypár, a többi egy-egy halvány pötty"
+    },
+    {
+      "name": "Palette",
+      "path": "components/marka/Palette/Palette.html",
+      "group": "Márka",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Az Igen színei nagy mintákon, az aktuális témában: márkaszínek, jelentés szerinti színek, tónusok, felületek"
+    },
+    {
+      "name": "PriceCard",
+      "path": "components/webhely/PriceCard/PriceCard.html",
+      "group": "Webhely",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Árkártya a csomagválasztáshoz: név, ár display-l méretben, időszak, egy mondat, pipás lista (mint pipa), gomb"
+    },
+    {
+      "name": "Progress",
+      "path": "components/adat/Progress/Progress.html",
+      "group": "Adat",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Kitöltöttség-sáv számokkal: a költségvetés lekötött része, az RSVP-válaszok aránya, a teendők készültsége"
+    },
+    {
+      "name": "ScheduleSlot",
+      "path": "components/a-nap/ScheduleSlot/ScheduleSlot.html",
+      "group": "A nap",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "A nap menetrendjének egy sora: idő bal oldalt (time stílus, táblázatos számjegyek), mellette a program, a felelős és a helyszín"
+    },
+    {
+      "name": "SectionHeader",
+      "path": "components/webhely/SectionHeader/SectionHeader.html",
+      "group": "Webhely",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Egy webhely-szekció vagy webes oldalrész fejléce: rose szemöldök, cím (heading, vagy size=\"l\"-lel display-l a landingen), egy mondat bevezető ink-muted-ban, jobbra opcionális művelet"
+    },
+    {
+      "name": "Segmented",
+      "path": "components/navigacio/Segmented/Segmented.html",
+      "group": "Navigáció",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Egy nézet szűrője vagy alnézet-váltója pirulasávban: 2–4 lehetőség, mindig egy aktív (ink kitöltés, on-ink szöveg – mint a TopNav aktív pirulája)"
+    },
+    {
+      "name": "Select",
+      "path": "components/urlap/Select/Select.html",
+      "group": "Űrlap",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Címkézett lenyíló mező a TextField dobozában (radius-md, line-strong keret, chevron-down ikon), natív select-tel – mobilon a rendszer saját választóját nyitja, ami gyorsabb és megbízhatóbb bármely raj"
+    },
+    {
+      "name": "Sheet",
+      "path": "components/retegek/Sheet/Sheet.html",
+      "group": "Rétegek",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Alulról felcsúszó panel mobilon (mode=\"sheet\", fogantyúval) és középre igazított ablak weben (mode=\"dialog\"): ugyanaz a tartalom, kétféle elhelyezés"
+    },
+    {
+      "name": "StatusTag",
+      "path": "components/statusz/StatusTag/StatusTag.html",
+      "group": "Státusz",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "A szolgáltatói csatorna státusza: Jelölt → Egyeztetés → Ajánlat → Lefoglalva, és bármelyikből No go"
+    },
+    {
+      "name": "Stepper",
+      "path": "components/navigacio/Stepper/Stepper.html",
+      "group": "Navigáció",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Több lépéses folyamat haladása: „2 / 4 · Stílus és hangulat” és alatta a lépések a logó pöttyeivel"
+    },
+    {
+      "name": "Switch",
+      "path": "components/urlap/Switch/Switch.html",
+      "group": "Űrlap",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Azonnal érvénybe lépő kapcsoló (role=\"switch\"): bekapcsolva rose sáv, on-rose gomb"
+    },
+    {
+      "name": "TabBar",
+      "path": "components/navigacio/TabBar/TabBar.html",
+      "group": "Navigáció",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Az app alsó navigációja: legfeljebb öt fül ikonnal és felirattal, lebegő pirulában, liquid glass réteggel a tartalom fölött"
+    },
+    {
+      "name": "TextField",
+      "path": "components/urlap/TextField/TextField.html",
+      "group": "Űrlap",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Címkézett beviteli mező segédszöveggel vagy hibaüzenettel"
+    },
+    {
+      "name": "Toast",
+      "path": "components/visszajelzes/Toast/Toast.html",
+      "group": "Visszajelzés",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Rövid, magától eltűnő visszajelzés egy művelet után: tömör pirula a képernyő alján (mobilon a TabBar fölött), z-toast rétegen"
+    },
+    {
+      "name": "TopNav",
+      "path": "components/navigacio/TopNav/TopNav.html",
+      "group": "Navigáció",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "A fő navigáció: az Igen logó (Logo, 28px magas, a kezdőlapra visz), a hat terület (Áttekintés, Terv, Szolgáltatók, Naptár, Vendégek, A nap) pirulákként, és a visszaszámláló türkiz pirulában"
+    },
+    {
+      "name": "VendorCard",
+      "path": "components/szolgaltatok/VendorCard/VendorCard.html",
+      "group": "Szolgáltatók",
+      "viewport": {
+        "width": 960,
+        "height": 120
+      },
+      "subtitle": "Egy szolgáltató kártyája: kép (vagy kategória-ikon surface-sunk mezőn), kategória és hely szemöldökben, név, ártól-ig amount stílusban, a csatorna státusza StatusTag-gel és egy művelet"
+    }
+  ]
+}

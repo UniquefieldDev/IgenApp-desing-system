@@ -1,0 +1,116 @@
+/* Igen – tokens. Generált fájl: src/tokens.json az igazság, ezt ne szerkeszd. */
+:root, [data-theme="light"] {
+  --surface: #FFF8FA;
+  --surface-raised: #FFFFFF;
+  --surface-sunk: #F6E9EF;
+  --line: #E6CEDA;
+  --line-strong: #9C7F9E;
+  --ink: #2A1330;
+  --ink-muted: #6B5270;
+  --rose: #C2185B;
+  --rose-soft: #FDE1EC;
+  --on-rose: #FFFFFF;
+  --lagoon: #2BC4B4;
+  --lagoon-soft: #D5F6F2;
+  --on-lagoon: #2A1330;
+  --lagoon-text: #0B6F66;
+  --mint: #3B7A0F;
+  --mint-soft: #E5F3D6;
+  --sky: #1D5BC9;
+  --sky-soft: #E1EAFD;
+  --danger: #B3261E;
+  --danger-soft: #FCE3E0;
+  --glass-fill: rgba(255,255,255,0.62);
+  --glass-edge: rgba(255,255,255,0.85);
+  --glass-sky: rgba(225,234,253,0.72);
+  --focus: #1D5BC9;
+  --link: var(--sky);
+  --on-ink: var(--surface);
+  --overlay: rgba(42,19,48,0.48);
+  --shadow-card: 0 1px 2px rgba(42,19,48,0.06), 0 8px 24px rgba(42,19,48,0.08);
+  --shadow-pop: 0 12px 32px rgba(194,24,91,0.18);
+  --shadow-glass: 0 1px 0 rgba(255,255,255,0.9) inset, 0 12px 32px rgba(42,19,48,0.14);
+}
+[data-theme="dark"] {
+  --surface: #1A1020;
+  --surface-raised: #251830;
+  --surface-sunk: #130A17;
+  --line: #3E2B47;
+  --line-strong: #8E7596;
+  --ink: #F9EEF4;
+  --ink-muted: #C3AEC7;
+  --rose: #FF6FA6;
+  --rose-soft: #4A1531;
+  --on-rose: #1A1020;
+  --lagoon: #4FDCCB;
+  --lagoon-soft: #0B3835;
+  --on-lagoon: #2A1330;
+  --lagoon-text: #7FE3D6;
+  --mint: #9ED56B;
+  --mint-soft: #1F3310;
+  --sky: #86AEFF;
+  --sky-soft: #1A2C57;
+  --danger: #FF8B7E;
+  --danger-soft: #4A1712;
+  --glass-fill: rgba(37,24,48,0.62);
+  --glass-edge: rgba(255,255,255,0.16);
+  --glass-sky: rgba(26,44,87,0.72);
+  --focus: #86AEFF;
+  --link: var(--sky);
+  --on-ink: var(--surface);
+  --overlay: rgba(0,0,0,0.6);
+  --shadow-card: 0 1px 2px rgba(0,0,0,0.5), 0 8px 24px rgba(0,0,0,0.35);
+  --shadow-pop: 0 12px 32px rgba(0,0,0,0.5);
+  --shadow-glass: 0 1px 0 rgba(255,255,255,0.12) inset, 0 12px 32px rgba(0,0,0,0.45);
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --blur-glass: blur(22px) saturate(160%);
+  --tap-min: 44px;
+  --control-md: 44px;
+  --control-sm: 34px;
+  --appbar: 56px;
+  --tabbar: 64px;
+  --icon-sm: 16px;
+  --icon-md: 20px;
+  --icon-lg: 24px;
+  --avatar-sm: 28px;
+  --avatar-md: 40px;
+  --bp-phone: 390px;
+  --bp-tablet: 768px;
+  --bp-desktop: 1024px;
+  --bp-wide: 1280px;
+  --container-app: 600px;
+  --container-text: 680px;
+  --container-web: 1200px;
+  --z-nav: 10;
+  --z-sheet: 20;
+  --z-toast: 30;
+  --font-display: "Bricolage Grotesque", "Figtree", system-ui, sans-serif;
+  --font-sans: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+.display-xl { font-family: var(--font-display); font-size: 56px; line-height: 60px; font-weight: 800; letter-spacing: -0.02em; }
+.display-l { font-family: var(--font-display); font-size: 40px; line-height: 44px; font-weight: 800; letter-spacing: -0.015em; }
+.display-m { font-family: var(--font-display); font-size: 32px; line-height: 36px; font-weight: 800; letter-spacing: -0.015em; }
+.heading { font-family: var(--font-display); font-size: 28px; line-height: 34px; font-weight: 700; letter-spacing: -0.01em; }
+.title { font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 700; }
+.body { font-family: var(--font-sans); font-size: 16px; line-height: 24px; font-weight: 400; }
+.body-strong { font-family: var(--font-sans); font-size: 16px; line-height: 24px; font-weight: 600; }
+.small { font-family: var(--font-sans); font-size: 14px; line-height: 20px; font-weight: 400; }
+.label { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em; }
+.caption { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 600; }
+.time { font-family: var(--font-mono); font-size: 14px; line-height: 20px; font-weight: 500; }
+.amount { font-family: var(--font-mono); font-size: 16px; line-height: 24px; font-weight: 500; }
+.amount-l { font-family: var(--font-mono); font-size: 28px; line-height: 34px; font-weight: 500; }

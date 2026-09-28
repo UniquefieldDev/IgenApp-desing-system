@@ -1,0 +1,16 @@
+<!-- @dsCard group="Adat" height=330 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Progress</title></head>
+<body>
+<div id="root" class="ig-stack" style="max-width:480px;gap:var(--space-5)"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(I.Progress, { label: 'Lekötve', value: 3300000, max: 6000000, valueLabel: '3 300 000 Ft', maxLabel: '6 000 000 Ft keret', hint: '55%' }),
+    h(I.Progress, { label: 'RSVP válaszok', value: 86, max: 120, valueLabel: '86 / 120', hint: '34 vendég még nem válaszolt', tone: 'lagoon' }),
+    h(I.Progress, { label: 'Teendők', value: 42, max: 42, valueLabel: '42 / 42', hint: 'Minden kész' }),
+    h(I.Progress, { label: 'Dekor', value: 640000, max: 400000, valueLabel: '640 000 Ft', maxLabel: '400 000 Ft keret', hint: 'Túllépés 240 000 Ft' })));
+</script>
+</body>
+</html>

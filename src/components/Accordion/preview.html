@@ -1,0 +1,18 @@
+<!-- @dsCard group="Webhely" height=300 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Accordion</title></head>
+<body>
+<div id="root" style="padding:var(--space-4);max-width:680px"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  ReactDOM.createRoot(document.getElementById('root')).render(h(I.Accordion, { items: [
+    { q: 'Mikor rögzül az esküvő dátuma?', a: h('p', null, 'A fizetés után. Utána csak vis maior esetén módosítható, ezt a feltételek részletezik.'), open: true },
+    { q: 'Átadhatjuk a hozzáférést másik párnak?', a: h('p', null, 'Nem. A hozzáférés a ti esküvőtökhöz és dátumotokhoz tartozik.') },
+    { q: 'Mit lát a partnerem?', a: h('p', null, 'Mindent, amit ti: a tervet ketten szerkesztitek, a változások azonnal látszanak.') },
+    { q: 'A szolgáltatók fizetnek a megkeresésért?', a: h('p', null, 'A szolgáltatók a platformon egyeztetnek veletek; a részleteket a szolgáltatói feltételek írják le.') }] }));
+
+</script>
+</body>
+</html>

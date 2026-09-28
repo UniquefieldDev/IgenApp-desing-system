@@ -1,0 +1,19 @@
+<!-- @dsCard group="Elrendezés" height=460 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Card</title></head>
+<body>
+<div id="root" class="ig-stack" style="gap:0;padding:0"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  var row = { display: 'flex', flexWrap: 'wrap', gap: 'var(--space-4)', alignItems: 'stretch' };
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment,null,
+    h('div',{className:'ig-row',style:{alignItems:'stretch'}},
+      h(I.Card,{eyebrow:'Következő teendő',title:'Fotós kiválasztása',tone:'highlight',action:h(I.StatusTag,{status:'egyeztetes'})},h('p',{style:{margin:0}},'Három jelölt a rövidlistán, kettőtől vár ajánlatot.'),h('div',null,h(I.Button,{variant:'primary',size:'sm'},'Megnyitás'))),
+      h(I.Card,{eyebrow:'Keret',title:'2 700 000 Ft maradt'},h('p',{style:{margin:0,color:'var(--ink-muted)'}},'A 6 000 000 Ft-ból 3 300 000 Ft lekötve.'))),
+    h('div',{className:'ig-backdrop'},h('div',{style:row},
+      h(I.Card,{eyebrow:'Visszaszámláló',title:'142 nap van hátra',tone:'glass'},h('p',{style:{margin:0}},'2027. június 12., Kiskert Pajta')),
+      h(I.Card,{eyebrow:'Koncepció',title:'Kerti nyár, pezsgő színekkel',tone:'glass',action:h(I.StatusTag,{status:'lefoglalva'},'Helyszín megvan')},h('p',{style:{margin:0}},'120 vendég, hosszú asztalok, fényfüzérek.'))))));
+</script>
+</body>
+</html>

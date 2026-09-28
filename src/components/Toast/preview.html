@@ -1,0 +1,15 @@
+<!-- @dsCard group="Visszajelzés" height=210 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Toast</title></head>
+<body>
+<div id="root" class="ig-stack" style="align-items:flex-start"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(I.Toast, { onClose: function () {} }, 'Jelölt hozzáadva a fotósokhoz'),
+    h(I.Toast, { booked: true, action: { label: 'Megnyitás' } }, 'Igen! A Kiskert Pajta lefoglalva.'),
+    h(I.Toast, { tone: 'danger', action: { label: 'Újra' } }, 'Nem sikerült menteni. Ellenőrizzétek a kapcsolatot.')));
+</script>
+</body>
+</html>

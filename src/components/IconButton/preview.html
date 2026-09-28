@@ -1,0 +1,17 @@
+<!-- @dsCard group="Műveletek" height=88 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>IconButton</title></head>
+<body>
+<div id="root" class="ig-row"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(I.IconButton, { icon: 'search', label: 'Keresés' }), h(I.IconButton, { icon: 'bell', label: 'Értesítések', badge: 3 }),
+    h(I.IconButton, { icon: 'sliders', label: 'Szűrők', variant: 'outline' }), h(I.IconButton, { icon: 'plus', label: 'Szolgáltató hozzáadása', variant: 'primary' }),
+    h(I.IconButton, { icon: 'printer', label: 'Nyomtatás', disabled: true })));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!-- @dsCard group="Ikonok" height=480 page -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Icon</title></head>
+<body>
+<div id="root" style="padding:var(--space-4)"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  var grid = { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(84px, 1fr))', gap: 'var(--space-2)' };
+  var cell = { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', padding: 'var(--space-2) 0', borderRadius: 'var(--radius-md)', background: 'var(--surface-raised)', border: '1px solid var(--line)' };
+  var lab = { fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px', color: 'var(--ink-muted)' };
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { style: grid }, I.Icon.names.map(function (n) {
+    return h('div', { key: n, style: cell }, h(I.Icon, { name: n, size: 24 }), h('span', { style: lab }, n));
+  })));
+
+</script>
+</body>
+</html>

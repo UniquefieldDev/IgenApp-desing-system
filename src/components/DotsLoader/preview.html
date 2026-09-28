@@ -1,0 +1,14 @@
+<!-- @dsCard group="Visszajelzés" height=190 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>DotsLoader</title></head>
+<body>
+<div id="root" class="ig-row" style="gap:var(--space-7);justify-content:center"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(I.DotsLoader, { label: 'Készül a koncepciótok…' }),
+    h(I.DotsLoader, { label: 'Kész a koncepció', done: true })));
+</script>
+</body>
+</html>

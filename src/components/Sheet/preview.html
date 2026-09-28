@@ -1,0 +1,20 @@
+<!-- @dsCard group="Rétegek" height=420 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Sheet</title></head>
+<body>
+<div id="root" style="display:flex;gap:var(--space-5);flex-wrap:wrap;padding:var(--space-4)"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  function frame(w, hgt, child) { return h('div', { className: 'ig-phone', style: { width: w, height: hgt, maxWidth: '100%' } }, h('div', { style: { padding: 'var(--space-5)', color: 'var(--ink-muted)' } }, 'Kiskert Pajta · Helyszín'), child); }
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    frame(360, 380, h(I.Sheet, { inline: true, title: 'Státusz módosítása', onClose: function () {}, footer: [h(I.Button, { key: 'c', variant: 'ghost' }, 'Mégse'), h(I.Button, { key: 'ok', variant: 'primary' }, 'Mentés')] },
+      h(I.Select, { label: 'Új státusz', options: [{ value: 'egyeztetes', label: 'Egyeztetés' }, { value: 'ajanlat', label: 'Ajánlat' }, { value: 'lefoglalva', label: 'Lefoglalva' }], value: 'ajanlat' }),
+      h(I.TextField, { label: 'Megjegyzés', placeholder: 'Pl. ajánlat 1 200 000 Ft, válasz péntekig' }))),
+    frame(440, 380, h(I.Sheet, { inline: true, mode: 'dialog', title: 'Biztosan No go?', onClose: function () {}, footer: [h(I.Button, { key: 'c', variant: 'ghost' }, 'Mégse'), h(I.Button, { key: 'ok', variant: 'primary' }, 'Igen, No go')] },
+      h('p', { style: { margin: 0 } }, 'A Kiskert Pajta kikerül az aktív jelöltek közül. Később visszahozhatjátok.')))));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!-- @dsCard group="Űrlap" height=140 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>ChoiceChip</title></head>
+<body>
+<div id="root" class="ig-stack"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  var wrap = { display: 'flex', flexWrap: 'wrap', gap: 'var(--space-2)' };
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h('p', { className: 'ig-card-eyebrow', style: { margin: 0 } }, 'Milyen legyen a hangulat?'),
+    h('div', { style: wrap }, h(I.ChoiceChip, { selected: true }, 'Kerti'), h(I.ChoiceChip, { selected: true }, 'Laza'), h(I.ChoiceChip, null, 'Elegáns'), h(I.ChoiceChip, null, 'Rusztikus'), h(I.ChoiceChip, null, 'Városi'), h(I.ChoiceChip, { icon: 'music' }, 'Zenés'), h(I.ChoiceChip, { disabled: true }, 'Tengerparti'))));
+
+</script>
+</body>
+</html>

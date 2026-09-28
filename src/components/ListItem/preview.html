@@ -1,0 +1,18 @@
+<!-- @dsCard group="Elrendezés" height=300 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>ListItem</title></head>
+<body>
+<div id="root" style="padding:var(--space-4);max-width:480px"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  ReactDOM.createRoot(document.getElementById('root')).render(h(I.List, { label: 'Vendégek' },
+    h(I.ListItem, { leading: h(I.Avatar, { name: 'Kovács Anna', size: 'sm' }), title: 'Kovács Anna', meta: 'Menyasszony családja · +1 kísérő', trailing: h(I.StatusTag, { status: 'lefoglalva' }, 'Jön'), href: '#' }),
+    h(I.ListItem, { leading: h(I.Avatar, { name: 'Tóth Bence', size: 'sm' }), title: 'Tóth Bence', meta: 'Barátok · vegetáriánus', trailing: h(I.StatusTag, { status: 'egyeztetes' }, 'Válaszra vár'), href: '#' }),
+    h(I.ListItem, { leading: h(I.Icon, { name: 'wallet' }), title: 'Foglaló a helyszínre', meta: 'Kiskert Pajta · nov. 12.', trailing: '350 000 Ft', onClick: function () {} }),
+    h(I.ListItem, { leading: h(I.Icon, { name: 'lock' }), title: 'Dátum rögzítve', meta: '2027. június 12. – a fizetés után nem módosítható' })));
+
+</script>
+</body>
+</html>

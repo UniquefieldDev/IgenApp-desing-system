@@ -1,0 +1,12 @@
+<!-- @dsCard group="Űrlap" height=200 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>TextField</title></head>
+<body>
+<div id="root" class="ig-stack"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment,null,h(I.TextField,{label:'Az esküvő dátuma',placeholder:'2027. június 12.',hint:'Ha még nincs pontos dátum, elég a hónap.'}),h(I.TextField,{label:'Keret',defaultValue:'6 000 000',suffix:'Ft',error:'A keret legalább 500 000 Ft legyen.'})));
+</script>
+</body>
+</html>

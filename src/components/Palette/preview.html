@@ -1,0 +1,44 @@
+<!-- @dsCard group="Márka" height=760 page -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Színpaletta</title>
+<style>
+  .pal { padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-6); }
+  .pal h2 { margin: 0 0 var(--space-3); font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: var(--space-4); }
+  .grid.big { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .sw { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--line); background: var(--surface-raised); }
+  .chip { height: 120px; display: flex; align-items: flex-end; padding: var(--space-3) var(--space-4); font-family: var(--font-display); font-weight: 800; font-size: 22px; }
+  .big .chip { height: 200px; font-size: 32px; }
+  .meta { padding: var(--space-3) var(--space-4); display: flex; flex-direction: column; gap: 2px; }
+  .meta b { font-size: 14px; }
+  .meta code { font-family: var(--font-mono); font-size: 13px; color: var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="pal">
+  <section><h2>Márkaszínek</h2><div class="grid big" data-set="rose:on-rose,lagoon:on-lagoon,ink:surface"></div></section>
+  <section><h2>Jelentés szerinti színek</h2><div class="grid" data-set="sky:on-rose,mint:on-rose,danger:on-rose"></div></section>
+  <section><h2>Tónusok</h2><div class="grid" data-set="rose-soft:rose,lagoon-soft:ink,sky-soft:sky,mint-soft:mint,danger-soft:danger"></div></section>
+  <section><h2>Felületek és vonalak</h2><div class="grid" data-set="surface:ink,surface-raised:ink,surface-sunk:ink,line:ink,line-strong:surface,ink-muted:surface"></div></section>
+</div>
+<script>
+  var cs = getComputedStyle(document.documentElement);
+  document.querySelectorAll('[data-set]').forEach(function (g) {
+    g.getAttribute('data-set').split(',').forEach(function (pair) {
+      var p = pair.split(':'), name = p[0], on = p[1];
+      var val = cs.getPropertyValue('--' + name).trim();
+      var sw = document.createElement('div'); sw.className = 'sw';
+      var chip = document.createElement('div'); chip.className = 'chip';
+      chip.style.background = 'var(--' + name + ')'; chip.style.color = 'var(--' + on + ')';
+      chip.textContent = 'Aa';
+      var meta = document.createElement('div'); meta.className = 'meta';
+      var b = document.createElement('b'); b.textContent = name;
+      var c = document.createElement('code'); c.textContent = val.toUpperCase();
+      meta.appendChild(b); meta.appendChild(c);
+      sw.appendChild(chip); sw.appendChild(meta); g.appendChild(sw);
+    });
+  });
+</script>
+</body>
+</html>

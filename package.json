@@ -1,0 +1,20 @@
+{
+  "name": "igen-design-system",
+  "version": "1.0.0",
+  "description": "Igen – magyar AI-esküvőtervező design systeme: tokenek, React-komponensek, logó, brand book. Webhely és app.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "package:claude-design": "npm run build && cd claude-design && zip -qr ../igen-design-system-claude-design.zip . && cd .. && echo igen-design-system-claude-design.zip"
+  },
+  "devDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "playwright": "^1.47.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

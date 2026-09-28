@@ -1,0 +1,17 @@
+<!-- @dsCard group="Űrlap" height=200 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Checkbox</title></head>
+<body>
+<div id="root" class="ig-stack" style="max-width:420px;gap:0"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(I.Checkbox, { label: 'Emlékeztető a vendégeknek', hint: 'Két héttel a válaszadási határidő előtt', checked: true }),
+    h(I.Checkbox, { label: 'Kísérő engedélyezése', hint: 'A vendég +1 főt hozhat' }),
+    h(I.Checkbox, { label: 'Gyerekmenü', disabled: true })));
+
+</script>
+</body>
+</html>

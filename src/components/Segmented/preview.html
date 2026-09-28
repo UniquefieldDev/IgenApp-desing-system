@@ -1,0 +1,16 @@
+<!-- @dsCard group="Navigáció" height=120 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Segmented</title></head>
+<body>
+<div id="root" class="ig-stack"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(I.Segmented, { label: 'Státusz', value: 'egyeztetes', options: [{ value: 'mind', label: 'Mind', count: 9 }, { value: 'jelolt', label: 'Jelölt', count: 4 }, { value: 'egyeztetes', label: 'Egyeztetés', count: 3 }, { value: 'ajanlat', label: 'Ajánlat', count: 2 }] }),
+    h('div', { style: { width: 390, maxWidth: '100%' } }, h(I.Segmented, { full: true, label: 'Nézet', value: 'teendo', options: [{ value: 'teendo', label: 'Teendők' }, { value: 'idopont', label: 'Időpontok' }] }))));
+
+</script>
+</body>
+</html>

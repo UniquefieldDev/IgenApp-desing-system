@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="hu" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Igen design system</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=DM+Mono:wght@400;500&family=Figtree:wght@400;600;700&display=swap">
+<style>
+/* Igen – tokens. Generált fájl: src/tokens.json az igazság, ezt ne szerkeszd. */
+:root, [data-theme="light"] {
+  --surface: #FFF8FA;
+  --surface-raised: #FFFFFF;
+  --surface-sunk: #F6E9EF;
+  --line: #E6CEDA;
+  --line-strong: #9C7F9E;
+  --ink: #2A1330;
+  --ink-muted: #6B5270;
+  --rose: #C2185B;
+  --rose-soft: #FDE1EC;
+  --on-rose: #FFFFFF;
+  --lagoon: #2BC4B4;
+  --lagoon-soft: #D5F6F2;
+  --on-lagoon: #2A1330;
+  --lagoon-text: #0B6F66;
+  --mint: #3B7A0F;
+  --mint-soft: #E5F3D6;
+  --sky: #1D5BC9;
+  --sky-soft: #E1EAFD;
+  --danger: #B3261E;
+  --danger-soft: #FCE3E0;
+  --glass-fill: rgba(255,255,255,0.62);
+  --glass-edge: rgba(255,255,255,0.85);
+  --glass-sky: rgba(225,234,253,0.72);
+  --focus: #1D5BC9;
+  --link: var(--sky);
+  --on-ink: var(--surface);
+  --overlay: rgba(42,19,48,0.48);
+  --shadow-card: 0 1px 2px rgba(42,19,48,0.06), 0 8px 24px rgba(42,19,48,0.08);
+  --shadow-pop: 0 12px 32px rgba(194,24,91,0.18);
+  --shadow-glass: 0 1px 0 rgba(255,255,255,0.9) inset, 0 12px 32px rgba(42,19,48,0.14);
+}
+[data-theme="dark"] {
+  --surface: #1A1020;
+  --surface-raised: #251830;
+  --surface-sunk: #130A17;
+  --line: #3E2B47;
+  --line-strong: #8E7596;
+  --ink: #F9EEF4;
+  --ink-muted: #C3AEC7;
+  --rose: #FF6FA6;
+  --rose-soft: #4A1531;
+  --on-rose: #1A1020;
+  --lagoon: #4FDCCB;
+  --lagoon-soft: #0B3835;
+  --on-lagoon: #2A1330;
+  --lagoon-text: #7FE3D6;
+  --mint: #9ED56B;
+  --mint-soft: #1F3310;
+  --sky: #86AEFF;
+  --sky-soft: #1A2C57;
+  --danger: #FF8B7E;
+  --danger-soft: #4A1712;
+  --glass-fill: rgba(37,24,48,0.62);
+  --glass-edge: rgba(255,255,255,0.16);
+  --glass-sky: rgba(26,44,87,0.72);
+  --focus: #86AEFF;
+  --link: var(--sky);
+  --on-ink: var(--surface);
+  --overlay: rgba(0,0,0,0.6);
+  --shadow-card: 0 1px 2px rgba(0,0,0,0.5), 0 8px 24px rgba(0,0,0,0.35);
+  --shadow-pop: 0 12px 32px rgba(0,0,0,0.5);
+  --shadow-glass: 0 1px 0 rgba(255,255,255,0.12) inset, 0 12px 32px rgba(0,0,0,0.45);
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --blur-glass: blur(22px) saturate(160%);
+  --tap-min: 44px;
+  --control-md: 44px;
+  --control-sm: 34px;
+  --appbar: 56px;
+  --tabbar: 64px;
+  --icon-sm: 16px;
+  --icon-md: 20px;
+  --icon-lg: 24px;
+  --avatar-sm: 28px;
+  --avatar-md: 40px;
+  --bp-phone: 390px;
+  --bp-tablet: 768px;
+  --bp-desktop: 1024px;
+  --bp-wide: 1280px;
+  --container-app: 600px;
+  --container-text: 680px;
+  --container-web: 1200px;
+  --z-nav: 10;
+  --z-sheet: 20;
+  --z-toast: 30;
+  --font-display: "Bricolage Grotesque", "Figtree", system-ui, sans-serif;
+  --font-sans: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+.display-xl { font-family: var(--font-display); font-size: 56px; line-height: 60px; font-weight: 800; letter-spacing: -0.02em; }
+.display-l { font-family: var(--font-display); font-size: 40px; line-height: 44px; font-weight: 800; letter-spacing: -0.015em; }
+.display-m { font-family: var(--font-display); font-size: 32px; line-height: 36px; font-weight: 800; letter-spacing: -0.015em; }
+.heading { font-family: var(--font-display); font-size: 28px; line-height: 34px; font-weight: 700; letter-spacing: -0.01em; }
+.title { font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 700; }
+.body { font-family: var(--font-sans); font-size: 16px; line-height: 24px; font-weight: 400; }
+.body-strong { font-family: var(--font-sans); font-size: 16px; line-height: 24px; font-weight: 600; }
+.small { font-family: var(--font-sans); font-size: 14px; line-height: 20px; font-weight: 400; }
+.label { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em; }
+.caption { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 600; }
+.time { font-family: var(--font-mono); font-size: 14px; line-height: 20px; font-weight: 500; }
+.amount { font-family: var(--font-mono); font-size: 16px; line-height: 24px; font-weight: 500; }
+.amount-l { font-family: var(--font-mono); font-size: 28px; line-height: 34px; font-weight: 500; }
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { font-family: var(--font-sans); font-size: 16px; line-height: 24px; background: var(--surface); color: var(--ink); }
+header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3) var(--space-5); background: var(--surface); border-bottom: 1px solid var(--line); }
+header h1 { margin: 0; font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 800; letter-spacing: -.01em; }
+header .sub { color: var(--ink-muted); font-size: 14px; }
+header nav { margin-left: auto; display: flex; gap: var(--space-1); flex-wrap: wrap; }
+header nav a { font-size: 13px; font-weight: 600; color: var(--ink); text-decoration: none; padding: 6px 12px; border-radius: var(--radius-pill); }
+header nav a:hover { background: var(--surface-sunk); }
+.theme { display: inline-flex; padding: 4px; gap: 2px; border-radius: var(--radius-pill); background: var(--surface-sunk); }
+.theme button { font: inherit; font-size: 13px; font-weight: 600; height: 30px; padding: 0 12px; border: 0; border-radius: var(--radius-pill); background: transparent; color: var(--ink); cursor: pointer; }
+.theme button[aria-pressed="true"] { background: var(--ink); color: var(--on-ink); }
+main { max-width: 1200px; margin: 0 auto; padding: var(--space-6) var(--space-5) var(--space-8); }
+section { margin-bottom: var(--space-7); }
+section h2 { margin: 0 0 var(--space-4); font-family: var(--font-display); font-size: 28px; line-height: 34px; font-weight: 700; letter-spacing: -.01em; }
+.card { margin-bottom: var(--space-5); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: var(--surface-raised); }
+.card-head { display: flex; align-items: baseline; gap: var(--space-3); padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--line); }
+.card-head h3 { margin: 0; font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 700; }
+.card-head p { margin: 0; font-size: 14px; line-height: 20px; color: var(--ink-muted); flex: 1; min-width: 0; }
+.card-head a { font-size: 13px; font-weight: 600; color: var(--sky); white-space: nowrap; }
+iframe { display: block; width: 100%; border: 0; background: var(--surface); }
+footer { padding: var(--space-5); text-align: center; color: var(--ink-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Igen design system</h1>
+  <span class="sub" id="count"></span>
+  <nav id="nav"></nav>
+  <div class="theme" role="group" aria-label="Téma">
+    <button type="button" data-theme="light" aria-pressed="true">Világos</button>
+    <button type="button" data-theme="dark" aria-pressed="false">Sötét</button>
+  </div>
+</header>
+<main id="main"></main>
+<footer>Forrás: <code>src/</code> · Generálva a <code>scripts/build.mjs</code> által.</footer>
+<script id="data" type="application/json">{"groups":["Márka","Ikonok","Műveletek","Űrlap","Navigáció","Elrendezés","Státusz","Szolgáltatók","Naptár","A nap","Adat","Visszajelzés","Rétegek","Webhely"],"cards":[{"name":"Accordion","path":"components/webhely/Accordion/Accordion.html","group":"Webhely","viewport":{"width":960,"height":120},"subtitle":"Kérdés–válasz lista natív details/summary elemekkel: hajszálvonalak között","page":false},{"name":"AppBar","path":"components/navigacio/AppBar/AppBar.html","group":"Navigáció","viewport":{"width":960,"height":120},"subtitle":"Mobil képernyőfejléc: vissza-gomb, cím és legfeljebb két művelet egy 56px-es sávban (appbar)","page":false},{"name":"Avatar","path":"components/adat/Avatar/Avatar.html","group":"Adat","viewport":{"width":960,"height":120},"subtitle":"Kör alakú kép vagy monogram (display betű, surface-sunk alap) személyekhez: vendégek, szolgáltató kapcsolattartója","page":false},{"name":"Button","path":"components/muveletek/Button/Button.html","group":"Műveletek","viewport":{"width":960,"height":120},"subtitle":"Pirula alakú gomb; a nézet egy fő műveletét emeli ki","page":false},{"name":"CalendarItem","path":"components/naptar/CalendarItem/CalendarItem.html","group":"Naptár","viewport":{"width":960,"height":120},"subtitle":"Egy sor a Naptár közös idővonalán","page":false},{"name":"Callout","path":"components/visszajelzes/Callout/Callout.html","group":"Visszajelzés","viewport":{"width":960,"height":120},"subtitle":"Beágyazott, megmaradó üzenet a tartalomban: tónusos háttér (-soft), ikon a saját színében, ink szöveg","page":false},{"name":"Card","path":"components/elrendezes/Card/Card.html","group":"Elrendezés","viewport":{"width":960,"height":120},"subtitle":"Tartalomdoboz fejléccel: szemöldök (eyebrow), cím, jobb oldali művelet vagy státusz","page":false},{"name":"Checkbox","path":"components/urlap/Checkbox/Checkbox.html","group":"Űrlap","viewport":{"width":960,"height":120},"subtitle":"Címkézett jelölőnégyzet (radius-sm, kipipálva mint), 44px-es sorban, opcionális segédszöveggel","page":false},{"name":"ChoiceChip","path":"components/urlap/ChoiceChip/ChoiceChip.html","group":"Űrlap","viewport":{"width":960,"height":120},"subtitle":"Kiválasztható pirula többes választáshoz: a brief stílusjegyei („kerti”, „elegáns”, „rusztikus”), szolgáltató-kategóriák szűrése, étkezési igények","page":false},{"name":"Cover","path":"components/marka/Cover/Cover.html","group":"Márka","viewport":{"width":960,"height":120},"subtitle":"Cover","page":false},{"name":"DotList","path":"components/elrendezes/DotList/DotList.html","group":"Elrendezés","viewport":{"width":960,"height":120},"subtitle":"Felsorolás leíró oldalakon (landing, csomagok, súgó): a pont helyén a logó kis, összeért pöttypárja.","page":false},{"name":"DotsLoader","path":"components/visszajelzes/DotsLoader/DotsLoader.html","group":"Visszajelzés","viewport":{"width":960,"height":120},"subtitle":"Várakozás a hosszabb AI-műveletekre (koncepció, költségvetés-javaslat, szolgáltatói ajánlás): a logó két pöttye kering, közelít és összeér, majd újra elválik","page":false},{"name":"EmptyState","path":"components/elrendezes/EmptyState/EmptyState.html","group":"Elrendezés","viewport":{"width":960,"height":120},"subtitle":"Üres lista vagy még el nem kezdett terület helye: surface-sunk mező, fölül a logó két pöttye nagyban és halványan (rose-soft, lagoon-soft), a rózsaszín pöttyben az opcionális ikon; alatta title stílus","page":false},{"name":"Footer","path":"components/webhely/Footer/Footer.html","group":"Webhely","viewport":{"width":960,"height":120},"subtitle":"A webhely lábléce: a logó egy mondattal, 2–4 linkoszlop label stílusú címekkel, alul a jogi sor és a jogi linkek","page":false},{"name":"Icon","path":"components/ikonok/Icon/Icon.html","group":"Ikonok","viewport":{"width":960,"height":120},"subtitle":"Az Igen ikonkészlete: 24-es rács, 2px vonal, kerek végek és sarkok, mindig currentColor","page":true},{"name":"IconButton","path":"components/muveletek/IconButton/IconButton.html","group":"Műveletek","viewport":{"width":960,"height":120},"subtitle":"Ikon-gomb 44px-es érintési célon, 24px-es ikonnal; a label kötelező, mert ez a gomb egyetlen szöveges neve","page":false},{"name":"ListItem","path":"components/elrendezes/ListItem/ListItem.html","group":"Elrendezés","viewport":{"width":960,"height":120},"subtitle":"Egy sor egy listában: bal oldalon ikon vagy avatar, középen cím és meta, jobb oldalon státusz vagy összeg, végén nyíl, ha a sor továbbvisz","page":false},{"name":"Logo","path":"components/marka/Logo/Logo.html","group":"Márka","viewport":{"width":960,"height":120},"subtitle":"Az Igen „Két pötty” logója: az i pöttye két egymás felé dőlő kör (rose, lagoon), a metszetük a betű színe","page":false},{"name":"Menu","path":"components/navigacio/Menu/Menu.html","group":"Navigáció","viewport":{"width":960,"height":120},"subtitle":"Lebegő, liquid glass menü a fejléc ritkán használt pontjaihoz: fiók, partner meghívása, előfizetés, kijelentkezés","page":false},{"name":"Pager","path":"components/navigacio/Pager/Pager.html","group":"Navigáció","viewport":{"width":960,"height":120},"subtitle":"Oldaljelző a landing körhintáihoz (vélemények, példa-koncepciók): az aktív oldal az összeért pöttypár, a többi egy-egy halvány pötty","page":false},{"name":"Palette","path":"components/marka/Palette/Palette.html","group":"Márka","viewport":{"width":960,"height":120},"subtitle":"Az Igen színei nagy mintákon, az aktuális témában: márkaszínek, jelentés szerinti színek, tónusok, felületek","page":true},{"name":"PriceCard","path":"components/webhely/PriceCard/PriceCard.html","group":"Webhely","viewport":{"width":960,"height":120},"subtitle":"Árkártya a csomagválasztáshoz: név, ár display-l méretben, időszak, egy mondat, pipás lista (mint pipa), gomb","page":false},{"name":"Progress","path":"components/adat/Progress/Progress.html","group":"Adat","viewport":{"width":960,"height":120},"subtitle":"Kitöltöttség-sáv számokkal: a költségvetés lekötött része, az RSVP-válaszok aránya, a teendők készültsége","page":false},{"name":"ScheduleSlot","path":"components/a-nap/ScheduleSlot/ScheduleSlot.html","group":"A nap","viewport":{"width":960,"height":120},"subtitle":"A nap menetrendjének egy sora: idő bal oldalt (time stílus, táblázatos számjegyek), mellette a program, a felelős és a helyszín","page":false},{"name":"SectionHeader","path":"components/webhely/SectionHeader/SectionHeader.html","group":"Webhely","viewport":{"width":960,"height":120},"subtitle":"Egy webhely-szekció vagy webes oldalrész fejléce: rose szemöldök, cím (heading, vagy size=\"l\"-lel display-l a landingen), egy mondat bevezető ink-muted-ban, jobbra opcionális művelet","page":false},{"name":"Segmented","path":"components/navigacio/Segmented/Segmented.html","group":"Navigáció","viewport":{"width":960,"height":120},"subtitle":"Egy nézet szűrője vagy alnézet-váltója pirulasávban: 2–4 lehetőség, mindig egy aktív (ink kitöltés, on-ink szöveg – mint a TopNav aktív pirulája)","page":false},{"name":"Select","path":"components/urlap/Select/Select.html","group":"Űrlap","viewport":{"width":960,"height":120},"subtitle":"Címkézett lenyíló mező a TextField dobozában (radius-md, line-strong keret, chevron-down ikon), natív select-tel – mobilon a rendszer saját választóját nyitja, ami gyorsabb és megbízhatóbb bármely raj","page":false},{"name":"Sheet","path":"components/retegek/Sheet/Sheet.html","group":"Rétegek","viewport":{"width":960,"height":120},"subtitle":"Alulról felcsúszó panel mobilon (mode=\"sheet\", fogantyúval) és középre igazított ablak weben (mode=\"dialog\"): ugyanaz a tartalom, kétféle elhelyezés","page":false},{"name":"StatusTag","path":"components/statusz/StatusTag/StatusTag.html","group":"Státusz","viewport":{"width":960,"height":120},"subtitle":"A szolgáltatói csatorna státusza: Jelölt → Egyeztetés → Ajánlat → Lefoglalva, és bármelyikből No go","page":false},{"name":"Stepper","path":"components/navigacio/Stepper/Stepper.html","group":"Navigáció","viewport":{"width":960,"height":120},"subtitle":"Több lépéses folyamat haladása: „2 / 4 · Stílus és hangulat” és alatta a lépések a logó pöttyeivel","page":false},{"name":"Switch","path":"components/urlap/Switch/Switch.html","group":"Űrlap","viewport":{"width":960,"height":120},"subtitle":"Azonnal érvénybe lépő kapcsoló (role=\"switch\"): bekapcsolva rose sáv, on-rose gomb","page":false},{"name":"TabBar","path":"components/navigacio/TabBar/TabBar.html","group":"Navigáció","viewport":{"width":960,"height":120},"subtitle":"Az app alsó navigációja: legfeljebb öt fül ikonnal és felirattal, lebegő pirulában, liquid glass réteggel a tartalom fölött","page":false},{"name":"TextField","path":"components/urlap/TextField/TextField.html","group":"Űrlap","viewport":{"width":960,"height":120},"subtitle":"Címkézett beviteli mező segédszöveggel vagy hibaüzenettel","page":false},{"name":"Toast","path":"components/visszajelzes/Toast/Toast.html","group":"Visszajelzés","viewport":{"width":960,"height":120},"subtitle":"Rövid, magától eltűnő visszajelzés egy művelet után: tömör pirula a képernyő alján (mobilon a TabBar fölött), z-toast rétegen","page":false},{"name":"TopNav","path":"components/navigacio/TopNav/TopNav.html","group":"Navigáció","viewport":{"width":960,"height":120},"subtitle":"A fő navigáció: az Igen logó (Logo, 28px magas, a kezdőlapra visz), a hat terület (Áttekintés, Terv, Szolgáltatók, Naptár, Vendégek, A nap) pirulákként, és a visszaszámláló türkiz pirulában","page":false},{"name":"VendorCard","path":"components/szolgaltatok/VendorCard/VendorCard.html","group":"Szolgáltatók","viewport":{"width":960,"height":120},"subtitle":"Egy szolgáltató kártyája: kép (vagy kategória-ikon surface-sunk mezőn), kategória és hely szemöldökben, név, ártól-ig amount stílusban, a csatorna státusza StatusTag-gel és egy művelet","page":false}]}</script>
+<script>
+  var data = JSON.parse(document.getElementById('data').textContent);
+  var main = document.getElementById('main'), nav = document.getElementById('nav');
+  document.getElementById('count').textContent = data.cards.length + ' kártya';
+  data.groups.forEach(function (g) {
+    var id = 'g-' + g.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    var a = document.createElement('a'); a.href = '#' + id; a.textContent = g; nav.appendChild(a);
+    var sec = document.createElement('section'); sec.id = id;
+    var h2 = document.createElement('h2'); h2.textContent = g; sec.appendChild(h2);
+    data.cards.filter(function (c) { return c.group === g; }).forEach(function (c) {
+      var card = document.createElement('article'); card.className = 'card';
+      var head = document.createElement('div'); head.className = 'card-head';
+      var h3 = document.createElement('h3'); h3.textContent = c.name;
+      var p = document.createElement('p'); p.textContent = c.subtitle || '';
+      var link = document.createElement('a'); link.href = 'previews/' + c.name + '.html'; link.target = '_blank'; link.rel = 'noopener'; link.textContent = 'Külön lapon';
+      head.appendChild(h3); head.appendChild(p); head.appendChild(link);
+      var fr = document.createElement('iframe'); fr.src = 'previews/' + c.name + '.html'; fr.title = c.name; fr.loading = 'lazy';
+      fr.style.height = Math.max(80, c.viewport.height + 32) + 'px';
+      fr.addEventListener('load', function () { applyTheme(fr); });
+      card.appendChild(head); card.appendChild(fr); sec.appendChild(card);
+    });
+    main.appendChild(sec);
+  });
+  function applyTheme(fr) { try { fr.contentWindow.postMessage({ igenTheme: document.documentElement.getAttribute('data-theme') }, '*'); } catch (e) {} }
+  window.addEventListener('message', function (e) {
+    if (!e.data || !e.data.igenHeight) return;
+    document.querySelectorAll('iframe').forEach(function (fr) { if (fr.contentWindow === e.source && e.data.igenHeight > 40) fr.style.height = (e.data.igenHeight + 8) + 'px'; });
+  });
+  document.querySelectorAll('.theme button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.documentElement.setAttribute('data-theme', b.dataset.theme);
+      document.querySelectorAll('.theme button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      document.querySelectorAll('iframe').forEach(applyTheme);
+    });
+  });
+</script>
+</body>
+</html>

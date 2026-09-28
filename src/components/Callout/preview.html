@@ -1,0 +1,17 @@
+<!-- @dsCard group="Visszajelzés" height=260 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Callout</title></head>
+<body>
+<div id="root" class="ig-stack" style="max-width:560px"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(I.Callout, { title: 'A dátum a fizetés után rögzül' }, h('p', null, '2027. június 12. – utána csak vis maior esetén módosítható. A hozzáférés nem adható át másik párnak.')),
+    h(I.Callout, { tone: 'brand', icon: 'sparkles', action: h(I.Button, { size: 'sm' }, 'Megnézem') }, h('p', null, 'Három új fotós illik a „kerti nyár” koncepcióhoz.')),
+    h(I.Callout, { tone: 'danger', title: 'A keret túllépve 240 000 Ft-tal' }, h('p', null, 'Csökkentsétek a dekor tételét, vagy emeljétek a keretet a Tervben.'))));
+
+</script>
+</body>
+</html>

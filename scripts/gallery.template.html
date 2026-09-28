@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="hu" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Igen design system</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=DM+Mono:wght@400;500&family=Figtree:wght@400;600;700&display=swap">
+<style>
+{{TOKENS_CSS}}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { font-family: var(--font-sans); font-size: 16px; line-height: 24px; background: var(--surface); color: var(--ink); }
+header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3) var(--space-5); background: var(--surface); border-bottom: 1px solid var(--line); }
+header h1 { margin: 0; font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 800; letter-spacing: -.01em; }
+header .sub { color: var(--ink-muted); font-size: 14px; }
+header nav { margin-left: auto; display: flex; gap: var(--space-1); flex-wrap: wrap; }
+header nav a { font-size: 13px; font-weight: 600; color: var(--ink); text-decoration: none; padding: 6px 12px; border-radius: var(--radius-pill); }
+header nav a:hover { background: var(--surface-sunk); }
+.theme { display: inline-flex; padding: 4px; gap: 2px; border-radius: var(--radius-pill); background: var(--surface-sunk); }
+.theme button { font: inherit; font-size: 13px; font-weight: 600; height: 30px; padding: 0 12px; border: 0; border-radius: var(--radius-pill); background: transparent; color: var(--ink); cursor: pointer; }
+.theme button[aria-pressed="true"] { background: var(--ink); color: var(--on-ink); }
+main { max-width: 1200px; margin: 0 auto; padding: var(--space-6) var(--space-5) var(--space-8); }
+section { margin-bottom: var(--space-7); }
+section h2 { margin: 0 0 var(--space-4); font-family: var(--font-display); font-size: 28px; line-height: 34px; font-weight: 700; letter-spacing: -.01em; }
+.card { margin-bottom: var(--space-5); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: var(--surface-raised); }
+.card-head { display: flex; align-items: baseline; gap: var(--space-3); padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--line); }
+.card-head h3 { margin: 0; font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 700; }
+.card-head p { margin: 0; font-size: 14px; line-height: 20px; color: var(--ink-muted); flex: 1; min-width: 0; }
+.card-head a { font-size: 13px; font-weight: 600; color: var(--sky); white-space: nowrap; }
+iframe { display: block; width: 100%; border: 0; background: var(--surface); }
+footer { padding: var(--space-5); text-align: center; color: var(--ink-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Igen design system</h1>
+  <span class="sub" id="count"></span>
+  <nav id="nav"></nav>
+  <div class="theme" role="group" aria-label="Téma">
+    <button type="button" data-theme="light" aria-pressed="true">Világos</button>
+    <button type="button" data-theme="dark" aria-pressed="false">Sötét</button>
+  </div>
+</header>
+<main id="main"></main>
+<footer>Forrás: <code>src/</code> · Generálva a <code>scripts/build.mjs</code> által.</footer>
+<script id="data" type="application/json">{{CARDS_JSON}}</script>
+<script>
+  var data = JSON.parse(document.getElementById('data').textContent);
+  var main = document.getElementById('main'), nav = document.getElementById('nav');
+  document.getElementById('count').textContent = data.cards.length + ' kártya';
+  data.groups.forEach(function (g) {
+    var id = 'g-' + g.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    var a = document.createElement('a'); a.href = '#' + id; a.textContent = g; nav.appendChild(a);
+    var sec = document.createElement('section'); sec.id = id;
+    var h2 = document.createElement('h2'); h2.textContent = g; sec.appendChild(h2);
+    data.cards.filter(function (c) { return c.group === g; }).forEach(function (c) {
+      var card = document.createElement('article'); card.className = 'card';
+      var head = document.createElement('div'); head.className = 'card-head';
+      var h3 = document.createElement('h3'); h3.textContent = c.name;
+      var p = document.createElement('p'); p.textContent = c.subtitle || '';
+      var link = document.createElement('a'); link.href = 'previews/' + c.name + '.html'; link.target = '_blank'; link.rel = 'noopener'; link.textContent = 'Külön lapon';
+      head.appendChild(h3); head.appendChild(p); head.appendChild(link);
+      var fr = document.createElement('iframe'); fr.src = 'previews/' + c.name + '.html'; fr.title = c.name; fr.loading = 'lazy';
+      fr.style.height = Math.max(80, c.viewport.height + 32) + 'px';
+      fr.addEventListener('load', function () { applyTheme(fr); });
+      card.appendChild(head); card.appendChild(fr); sec.appendChild(card);
+    });
+    main.appendChild(sec);
+  });
+  function applyTheme(fr) { try { fr.contentWindow.postMessage({ igenTheme: document.documentElement.getAttribute('data-theme') }, '*'); } catch (e) {} }
+  window.addEventListener('message', function (e) {
+    if (!e.data || !e.data.igenHeight) return;
+    document.querySelectorAll('iframe').forEach(function (fr) { if (fr.contentWindow === e.source && e.data.igenHeight > 40) fr.style.height = (e.data.igenHeight + 8) + 'px'; });
+  });
+  document.querySelectorAll('.theme button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.documentElement.setAttribute('data-theme', b.dataset.theme);
+      document.querySelectorAll('.theme button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      document.querySelectorAll('iframe').forEach(applyTheme);
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!-- @dsCard group="Státusz" height=64 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>StatusTag</title></head>
+<body>
+<div id="root" class="ig-row"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment,null,['jelolt','egyeztetes','ajanlat','lefoglalva','nogo'].map(function(s){return h(I.StatusTag,{key:s,status:s})})));
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!-- @dsCard group="Webhely" height=340 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>SectionHeader</title></head>
+<body>
+<div id="root" class="ig-stack" style="gap:var(--space-7)"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(I.SectionHeader, { as: 'h1', size: 'l', align: 'center', eyebrow: 'Igen – esküvőtervező', title: 'Egy brief, és három perc alatt áll a koncepció', lead: 'Költségvetés, szolgáltató-jelöltek és egy közös terv – ketten, egy helyen.' }),
+    h(I.SectionHeader, { eyebrow: 'Szolgáltatók', title: 'Fotósok – 4 jelölt', lead: 'Kettőtől vár ajánlatot, egy egyeztetés alatt.', action: h(I.Button, { size: 'sm' }, 'Szűrők') })));
+
+</script>
+</body>
+</html>

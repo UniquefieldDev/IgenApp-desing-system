@@ -1,0 +1,12 @@
+<!-- @dsCard group="A nap" height=220 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>ScheduleSlot</title></head>
+<body>
+<div id="root" class="ig-stack" style="gap:0"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment,null,h(I.ScheduleSlot,{start:'15:00',end:'15:30',title:'Vendégfogadás, welcome drink',owner:'Ceremóniamester',place:'Kert'}),h(I.ScheduleSlot,{start:'15:30',end:'16:00',title:'Szertartás',owner:'Anyakönyvvezető',place:'Diófa alatt',highlight:true}),h(I.ScheduleSlot,{start:'16:00',end:'17:00',title:'Csoportképek',owner:'Fotós',place:'Pajta előtt'})));
+</script>
+</body>
+</html>

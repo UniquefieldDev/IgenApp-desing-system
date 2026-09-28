@@ -1,0 +1,12 @@
+<!-- @dsCard group="Navigáció" height=260 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Menu</title></head>
+<body>
+<div id="root" class="ig-backdrop"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(I.Menu,{label:'Fiók menü',items:[{label:'Fiók'},{label:'Partner meghívása',hint:'Kata'},{label:'Előfizetés',hint:'Teljes hozzáférés'},'-',{label:'Kijelentkezés'}]}));
+</script>
+</body>
+</html>

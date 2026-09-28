@@ -1,0 +1,20 @@
+<!-- @dsCard group="Szolgáltatók" height=560 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>VendorCard</title></head>
+<body>
+<div id="root" class="ig-stack" style="gap:var(--space-5)"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  var grid = { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 'var(--space-4)' };
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h('div', { style: grid },
+      h(I.VendorCard, { icon: 'map-pin', category: 'Helyszín', place: 'Etyek', name: 'Kiskert Pajta', price: '1 200 000 Ft-tól', status: 'lefoglalva', note: 'Foglaló kifizetve, szerződés aláírva', action: h(I.Button, { size: 'sm' }, 'Megnyitás') }),
+      h(I.VendorCard, { icon: 'camera', category: 'Fotó és videó', place: 'Budapest', name: 'Fény Műhely', price: '450 000 Ft-tól', status: 'ajanlat', note: 'Ajánlat érkezett, válasz péntekig', action: h(I.Button, { variant: 'primary', size: 'sm' }, 'Ajánlat megnézése') }),
+      h(I.VendorCard, { icon: 'music', category: 'Zene', place: 'Pest megye', name: 'Hajnal Zenekar', note: 'AI-javaslat a „kerti nyár” koncepcióhoz', action: h(I.Button, { size: 'sm' }, 'Hozzáadás a jelöltekhez') })),
+    h('div', { style: { maxWidth: 480 } }, h(I.VendorCard, { compact: true, icon: 'utensils', category: 'Catering', place: 'Budapest', name: 'Zöld Asztal', price: '18 000 Ft/fő-től', status: 'egyeztetes', href: '#' }))));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!-- @dsCard group="Elrendezés" height=290 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>EmptyState</title></head>
+<body>
+<div id="root" class="ig-row" style="align-items:stretch"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h('div', { style: { flex: '1 1 300px' } }, h(I.EmptyState, { icon: 'camera', title: 'Még nincs jelölt fotós', action: h(I.Button, { variant: 'primary' }, 'Javaslatok kérése') }, 'A koncepció alapján három-öt fotóst ajánlunk, közülük választhattok jelöltet.')),
+    h('div', { style: { flex: '1 1 300px' } }, h(I.EmptyState, { title: 'A vendéglista üres', action: h(I.Button, null, 'Vendég hozzáadása') }, 'Adjátok hozzá a családot és a barátokat; a meghívót és az RSVP-t innen küldjük.'))));
+</script>
+</body>
+</html>

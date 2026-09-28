@@ -1,0 +1,17 @@
+<!-- @dsCard group="Navigáció" height=200 -->
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>TabBar</title></head>
+<body>
+<div id="root" class="ig-backdrop" style="display:flex;justify-content:center"></div>
+<script>
+  var I = window.Igen, h = React.createElement;
+  
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { style: { width: 390, maxWidth: '100%' } },
+    h(I.TabBar, { active: 'szolgaltatok', items: [
+      { key: 'attekintes', label: 'Áttekintés', icon: 'home' }, { key: 'terv', label: 'Terv', icon: 'sparkles' },
+      { key: 'szolgaltatok', label: 'Szolgáltatók', icon: 'briefcase' }, { key: 'naptar', label: 'Naptár', icon: 'calendar', badge: 2 }, { key: 'vendegek', label: 'Vendégek', icon: 'users' }] })));
+
+</script>
+</body>
+</html>
